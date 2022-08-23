@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bingo</title>
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <link rel="stylesheet" href="assets/fonts/themify-icons.css">
+</head>
+
+<body>
+    <div class="aside-left">
+        <div class="close-button">
+            <label for="check-close-button" id="close-button"><i class="ti-menu"></i></label>
+        </div>
+        <input type="checkbox" hidden id="check-close-button">
+        <div class="aside-left-content">
+            <div class="pick-color pick">
+                <label class="color-label" for="color">Chọn màu: </label>
+                <select name="" id="color">
+                    <option style="background-color: red; color: #000;" value="red">Đỏ</option>
+                    <option style="background-color: yellow; color: #000;" value="yellow">Vàng</option>
+                    <option style="background-color: green; color: #ccc;" value="green">Xanh lá</option>
+                    <option style="background-color: blue; color: #ccc;" value="blue">Xanh dương</option>
+                    <option style="background-color: orange; color: #000;" value="orange">Cam</option>
+                    <option style="background-color: lightGreen; color: #000;" value="lightGreen">Xanh lá mạ</option>
+                    <option style="background-color: purple; color: #ccc;" value="purple">Tím</option>
+                    <option style="background-color: pink; color: #000;" value="pink">Hồng</option>
+                </select>
+            </div>
+            <div class="pick-page pick">
+                <label class="page-label" for="color">Số tờ: </label>
+                <select name="" id="page">
+                    <option value="one">1 tờ</option>
+                    <option value="two">2 tờ</option>
+                </select>
+            </div>
+            <div class="radio-page pick">
+                <div class="page-1">
+                    <input onchange="page1()" checked type="radio" name="radio-page" id="radio-page1"><label
+                        for="radio-page1">Tờ số 1</label>
+                </div>
+                <div class="page-2">
+                    <input onchange="page2()" type="radio" name="radio-page" id="radio-page2"><label for="radio-page2">Tờ số
+                        2</label>
+                </div>
+            </div>
+            <div class="check-area pick mr-0px">
+                <input onchange="checkArea()" type="checkbox" name="check-area" id="check-area"><label for="check-area">Ô
+                    nhập?</label>
+                <input onchange="checkWaiting()" type="checkbox" name="check-waiting" id="check-waiting"><label for="check-waiting">Hàng chờ?</label>
+            </div>
+            <div class="number-list-box">
+            </div>
+        </div>
+    </div>
+    <div class="content">
+        <div class="bingo-box" id="bingo-box">
+        </div>
+        <div class="display-none textarea">
+            <textarea name="" id="input-textarea" cols="" rows=""></textarea>
+        </div>
+        <div class="message display-none">
+        </div>
+        <button class="clear-button">Chơi lại</button>
+    </div>
+    <script src="assets/js/script.js"></script>
+</body>
+
+</html>

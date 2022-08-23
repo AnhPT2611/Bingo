@@ -1,0 +1,264 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: Helvetica, Arial, sans-serif;
+    scroll-behavior: smooth;
+    list-style-type: none;
+}
+
+html {
+    position: relative;;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.w50px-h50px {
+    width: 45px !important;
+    height: 50px !important;
+}
+
+/* content */
+.content {
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    width: 100%;
+    height: auto;
+}
+
+.clear-button {
+    width: 100px;
+    height: 40px;
+    border-radius: 5px;
+    border: 1px solid #fff;
+    margin: 10px auto;
+    cursor: pointer;
+    background-color: #ccc;
+    outline: none;
+}
+
+.clear-button:hover {
+    opacity: 0.85;
+}
+
+/* Pick color */
+.pick {
+    display: flex;
+    justify-content: center;
+    padding: 10px;
+    margin-top: 30px;
+    width: 100%;
+}
+
+.mr-0px {
+    margin-top: 0px;
+}
+
+#color, #page {
+    margin: 0 10px;
+    width: calc(100% - 100px);;
+    height: 40px;
+    position: absolute;
+    right: 0;
+    padding: 5px 10px;
+}
+
+#page
+
+#color {
+    background-color: red;
+    opacity: 0.9;
+}
+
+.color-label, .page-label {
+    line-height: 20px;
+    -webkit-user-select: none; /* Safari */
+    -ms-user-select: none; /* IE 10 and IE 11 */
+    user-select: none; /* Standard syntax */
+    position: absolute;
+    left: 10px;
+}
+
+/* Radio Page */
+.aside-left label {
+    padding: 10px 20px 10px 0px;
+}
+
+.number-list-box {
+    position: absolute;
+    height: 50%;
+    width: calc(100% - 20px);
+    bottom: 10px;
+    left: 10px;
+    background-color: #fff;
+    display: flex;
+    flex-wrap: wrap;
+    align-content: flex-start;
+}
+
+.number-ball {
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    padding: 10px;
+    box-shadow: 0 0 2px #333;
+    margin: 5px 2.5px 5px 5px;
+    background-color: #ccc;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.page-1, .page-2 {
+    margin: 10px ;
+}
+
+/* Bingo */
+#bingo-box1, #bingo-box2 {
+    display: block;
+    height: 450px;
+    width: 100%;
+    padding: 15px;
+    background-color: beige;
+    border: black solid 1px;
+}
+
+.bingo-group {
+    display: inline-block;
+    height: 32.5%;
+    width: 100%;
+    border-left: 1px #333 solid;
+    border-bottom: 1px #333 solid;
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.highlight {
+    background-color: rgb(255, 230, 89) !important;
+}
+
+.display-none {
+    display: none !important;
+}
+
+.number {
+    background-color: #fff;
+    -webkit-user-select: none; /* Safari */
+    -ms-user-select: none; /* IE 10 and IE 11 */
+    user-select: none; /* Standard syntax */
+}
+
+.row {
+    background-color: #cd2533;
+    width: auto;
+    height: 33.333%;
+}
+
+.col {
+    float: left;
+    height: 100%;
+    width: 11.111111%;
+    border-top: 1px solid #333;
+    border-right: 1px solid #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    clear: right;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.col:hover {
+    background-color: #ccc;
+}
+
+/* Aside */
+.aside-left {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 250px;
+    height: 100%;
+    background-color: #ccc;
+    padding: 10px;
+    font-size: 12px;
+    font-weight: bold;
+    border-radius: 5px;
+    animation: fadeIn ease .2s;
+}
+
+/* Close button */
+#close-button {
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 10px;
+    width: 40px;
+    height: 40px;
+    font-size: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 5px;
+    margin: 5px;
+}
+
+#close-button:hover {
+    opacity: 0.3;
+    cursor: pointer;
+}
+
+#close-button label {
+    display: inline-block;
+    cursor: pointer !important;
+}
+
+/* Message */
+.message {
+    margin-top: 20px;
+    background-color: #ddd;
+    height: 200px;
+    width: 100%;
+    padding: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    align-content: flex-start;
+}
+
+/* Input Text */
+#input-textarea { 
+    outline: 0; 
+    padding: 10px;
+    width: 100%;
+    height: 200px;
+    margin-top: 20px   
+}
+
+/* Ipad */
+@media (min-width: 46.25em) and (max-width: 64em) {
+}
+
+/* Mobile */
+@media (max-width: 46.25em) {
+    #bingo-box {
+        width: 300px !important;
+        display: block !important;
+    }
+
+    .aside-left {
+        width: 300px;
+    }
+}
+
+@keyframes fadeIn {
+    from { 
+        transform: translateX(-50%);
+        opacity: 0;
+    }
+    to { 
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
